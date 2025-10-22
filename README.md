@@ -1,6 +1,6 @@
 # 📚 EaseOps E-Library – User Backend Module
 
-This repository contains the **User-side backend** of the **E-Library Project**, built using **Node.js**, **Express**, and **MongoDB**.  
+This repository contains the **User-side backend** of the **EaseOps E-Library Project**, built using **Node.js**, **Express**, and **MongoDB**.  
 
 It handles user authentication, profile preferences, bookmarks, notes, feedback, contact requests, and FAQs — providing a smooth, feature-rich reading experience.
 
@@ -92,7 +92,7 @@ EaseOps-E-Library/
 ```json
 {
     "message": "Login Successful!",
-    "token": "your-JWT-access-token",
+    "token": "<your-JWT-access-token>",
     "user": {
         "id": "68f7a2f82537247e7108edf5",
         "username": "TestUser"
@@ -189,7 +189,7 @@ EaseOps-E-Library/
 {
     "message": "Bookmark removed",
     "bookmarks": [
-        "your-remaining-bookmarks"
+        "<your-remaining-bookmarks>"
     ]
 }
 ```
@@ -264,7 +264,7 @@ EaseOps-E-Library/
 {
     "message": "Note deleted",
     "notes": [
-        "your-remaining-notes"
+        "<your-remaining-notes>"
     ]
 }
 ```
@@ -422,7 +422,7 @@ EaseOps-E-Library/
 
 ---
 
-## 🔒 Authorization
+## 🔒 Authorization & Headers
 
 All **user** and **ebook** routes are protected using JWT.  
 
