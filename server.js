@@ -17,11 +17,13 @@ app.use(express.json())
 const authRoutes = require('./routes/authRoutes')
 const userRoutes = require('./routes/userRoutes')
 const ebookRoutes = require('./routes/ebookRoutes')
+const supportRoutes = require('./routes/supportRoutes')
 
 //Mount routes
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/ebooks', ebookRoutes)
+app.use('/api/support', supportRoutes)
 
 //Connecting to MongoDB
 mongoose.connect(process.env.MONGO_URI)

@@ -31,18 +31,20 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    bookmarks: [{
-        ebook: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Ebook',
-            required: true
-        },
-        page: {
-            type: Number,
-            default: 1
-        },
-        default: []
-    }],
+    bookmarks: {
+        type: [{
+            ebook: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Ebook',
+                required: true
+            },
+            page: {
+                type: Number,
+                default: 1
+            }
+        }],
+        default: [] 
+    },
     notes: [NoteSchema]
 }, { timestamps: true })
 

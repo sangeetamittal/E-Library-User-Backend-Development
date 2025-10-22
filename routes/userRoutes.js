@@ -8,6 +8,8 @@ const { getBookmarks, addOrUpdateBookmark, removeBookmark } = require('../handle
 const { updateMode } = require('../handlers/user/profile');
 const { addOrUpdateNote, deleteNote, getNotes } = require('../handlers/user/notes');
 
+const { submitFeedback } = require('../handlers/user/feedback');
+
 // Update user mode preferences
 router.put('/preferences', [
     check('darkMode').isBoolean().withMessage('Darkmode must be true or false'),
@@ -40,5 +42,9 @@ router.post('/notes', [
 router.delete('/notes/:ebookId', [
     param('ebookId').isMongoId().withMessage('Valid ebookId is required')
 ], verifyToken, deleteNote);
+
+// Submit user feedback
+router.post('/feedback', verifyToken, submitFeedback);
+
 
 module.exports = router;
